@@ -3,6 +3,7 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 import shallowCompare from 'react-addons-shallow-compare'
+import _ from 'lodash'
 
 import Checkboard from './Checkboard'
 
