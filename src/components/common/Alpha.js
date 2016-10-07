@@ -58,7 +58,7 @@ export class Alpha extends React.Component {
 
   render(): any {
     const rgb = this.props.rgb
-    const styles = reactCSS({
+    const defaultStyles = reactCSS({
       'default': {
         alpha: {
           absolute: '0px 0px 0px 0px',
@@ -95,6 +95,8 @@ export class Alpha extends React.Component {
         },
       },
     })
+
+    const styles = _.defaultsDeep(this.props.styles, defaultStyles)
 
     let pointer = this.props.pointer ? (
       <this.props.pointer { ...this.props } />
